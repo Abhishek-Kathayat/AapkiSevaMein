@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mRecyclerView = (RecyclerView)findViewById(R.id.main_list);
+        mRecyclerView = (RecyclerView)findViewById(R.id.service_view);
         mAdapter = new MainAdapter(servicelist);
         mLayoutManager = new LinearLayoutManager(getApplicationContext());
         mRecyclerView.setLayoutManager(mLayoutManager);

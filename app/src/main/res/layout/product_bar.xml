@@ -1,0 +1,44 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/product_bar">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
+
+        <ImageView
+            android:id="@+id/Image_ProductBar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:src="@null"/>
+
+        <TextView
+            android:id="@+id/Text_ProductBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ProductName_1"
+            android:layout_below="@id/Image_ProductBar"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/Price_ProductBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rs 50.00"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/Image_ProductBar"
+            android:layout_alignParentEnd="true"
+            android:textSize="25dp" />
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

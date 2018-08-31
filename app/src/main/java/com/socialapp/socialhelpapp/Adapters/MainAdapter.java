@@ -25,7 +25,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.MainViewHolder
         public MainViewHolder(View view) {
             super(view);
             mTextView = view.findViewById(R.id.service_name_main);
-            container = view.findViewById(R.id.service_list);
+            container = view.findViewById(R.id.service_bar);
         }
     }
 
@@ -37,7 +37,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.MainViewHolder
     @Override
     public MainViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        View serviceview = LayoutInflater.from(parent.getContext()).inflate(R.layout.service_list, parent, false);
+        View serviceview = LayoutInflater.from(parent.getContext()).inflate(R.layout.service_bar, parent, false);
         return new MainViewHolder(serviceview);
     }
 
