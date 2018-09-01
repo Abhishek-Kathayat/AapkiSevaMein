@@ -10,7 +10,10 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.socialapp.socialhelpapp.Models.ProductList_Model;
+import com.socialapp.socialhelpapp.MyParcelable;
+import com.socialapp.socialhelpapp.ProductDetailActivity;
 import com.socialapp.socialhelpapp.R;
 import com.socialapp.socialhelpapp.ServiceActivity;
 
@@ -50,11 +53,14 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
         ProductList_Model product = productlist.get(position);
         holder.mNameView.setText(product.getProductname());
         holder.mPriceView.setText(product.getProductprice());
+        Glide.with(holder.mImageView.getContext()).load(product.getProductimage()).into(holder.mImageView);
 
         holder.container.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent in = new Intent(view.getContext(), ServiceActivity.class);
+                MyParcelable parcel = new MyParcelable();
+                Intent in = new Intent(view.getContext(), ProductDetailActivity.class);
+                in.putExtra("myDataKey", parcel);
                 view.getContext().startActivity(in);
             }
         });
