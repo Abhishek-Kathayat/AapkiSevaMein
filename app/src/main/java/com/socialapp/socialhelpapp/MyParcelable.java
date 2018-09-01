@@ -5,8 +5,8 @@ import android.os.Parcelable;
 
 public class MyParcelable implements Parcelable {
 
-    private int mData;
-    private String mName;
+    public String mName;
+    public String mPrice;
 
     public static final Creator<MyParcelable> CREATOR = new Creator<MyParcelable>() {
         @Override
@@ -21,11 +21,14 @@ public class MyParcelable implements Parcelable {
     };
 
     private MyParcelable(Parcel parcel) {
-        mData = parcel.readInt();
         mName = parcel.readString();
+        mPrice = parcel.readString();
     }
 
-    public MyParcelable() {}
+    public MyParcelable(String mName, String mPrice) {
+        this.mName = mName;
+        this.mPrice = mPrice;
+    }
 
     @Override
     public int describeContents() {
@@ -34,7 +37,7 @@ public class MyParcelable implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel out, int flags) {
-        out.writeInt(mData);
         out.writeString(mName);
+        out.writeString(mPrice);
     }
 }
