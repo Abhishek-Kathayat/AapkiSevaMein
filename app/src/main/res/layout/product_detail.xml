@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/product_detail">
+    android:id="@+id/product_detail"
+    android:orientation="vertical">
 
     <RelativeLayout
         android:layout_height="match_parent"
@@ -14,15 +15,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <ImageButton
-                android:id="@+id/Prodetail_mvback"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
+            <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_arrow_back"
-                android:background="@android:color/transparent" />
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:text="@string/moveback"
+                android:textSize="20sp"
+                android:textColor="@color/colorBlack"
+                android:background="@android:color/transparent"/>
 
         </RelativeLayout>
 
@@ -47,7 +49,8 @@
                 android:layout_marginStart="20dp"
                 android:text="@string/product_name"
                 android:layout_marginTop="10dp"
-                android:textColor="@color/colorBlack"/>
+                android:textColor="@color/colorBlack"
+                android:layout_marginBottom="10dp"/>
 
             <TextView
                 android:id="@+id/Prodetail_proprice"
@@ -59,7 +62,27 @@
                 android:layout_marginEnd="20dp"
                 android:text="@string/product_price"
                 android:layout_marginTop="10dp"
-                android:textColor="@color/colorBlack"/>
+                android:textColor="@color/colorBlack"
+                android:layout_marginBottom="10dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/Prodetail_Relay3"
+            android:layout_below="@id/Prodetail_Relay2"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:text="@string/buy"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:background="@color/colorGrey"/>
 
         </RelativeLayout>
 

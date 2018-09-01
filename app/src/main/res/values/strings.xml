@@ -3,4 +3,6 @@
     <string name="product_name">Product_Name</string>
     <string name="product_price">Rs. 50.00</string>
     <string name="service_name">Service</string>
+    <string name="buy">ADD TO CART</string>
+    <string name="moveback">Back</string>
 </resources>

@@ -7,6 +7,7 @@ public class MyParcelable implements Parcelable {
 
     public String mName;
     public String mPrice;
+    public String mthumb;
 
     public static final Creator<MyParcelable> CREATOR = new Creator<MyParcelable>() {
         @Override
@@ -23,11 +24,13 @@ public class MyParcelable implements Parcelable {
     private MyParcelable(Parcel parcel) {
         mName = parcel.readString();
         mPrice = parcel.readString();
+        mthumb = parcel.readString();
     }
 
-    public MyParcelable(String mName, String mPrice) {
+    public MyParcelable(String mName, String mPrice, String mthumb) {
         this.mName = mName;
         this.mPrice = mPrice;
+        this.mthumb = mthumb;
     }
 
     @Override
@@ -39,5 +42,6 @@ public class MyParcelable implements Parcelable {
     public void writeToParcel(Parcel out, int flags) {
         out.writeString(mName);
         out.writeString(mPrice);
+        out.writeString(mthumb);
     }
 }

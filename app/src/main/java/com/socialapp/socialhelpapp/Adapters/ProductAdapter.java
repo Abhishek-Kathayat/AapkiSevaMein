@@ -16,6 +16,8 @@ import com.socialapp.socialhelpapp.MyParcelable;
 import com.socialapp.socialhelpapp.ProductDetailActivity;
 import com.socialapp.socialhelpapp.R;
 
+import org.greenrobot.eventbus.EventBus;
+
 import java.util.List;
 
 public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductViewHolder> {
@@ -57,10 +59,11 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
         holder.container.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                MyParcelable parcel = new MyParcelable(product.getProductname(), product.getProductprice());
+                MyParcelable parcel = new MyParcelable(product.getProductname(), product.getProductprice(), product.getProductimage());
                 Intent in = new Intent(view.getContext(), ProductDetailActivity.class);
                 in.putExtra("myDataKey", parcel);
                 view.getContext().startActivity(in);
+
             }
         });
     }
@@ -68,4 +71,5 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
     public int getItemCount() {
         return productlist.size();
     }
+
 }
