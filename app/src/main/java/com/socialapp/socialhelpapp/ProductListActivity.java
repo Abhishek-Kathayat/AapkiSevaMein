@@ -23,7 +23,7 @@ public class ProductListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.product_list);
 
-        mRecyclerView = (RecyclerView)findViewById(R.id.product_view);
+        mRecyclerView = findViewById(R.id.product_view);
         mAdapter = new ProductAdapter(productlist);
         mLayoutManager = new LinearLayoutManager(getApplicationContext());
         mRecyclerView.setLayoutManager(mLayoutManager);

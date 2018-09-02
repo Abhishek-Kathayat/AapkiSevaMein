@@ -5,4 +5,6 @@
     <string name="service_name">Service</string>
     <string name="buy">ADD TO CART</string>
     <string name="moveback">Back</string>
+    <string name="home">HOME</string>
+    <string name="userdetails">USER DETAILS</string>
 </resources>

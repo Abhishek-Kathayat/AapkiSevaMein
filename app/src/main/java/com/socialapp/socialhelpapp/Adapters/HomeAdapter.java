@@ -15,7 +15,7 @@ import com.socialapp.socialhelpapp.ServiceActivity;
 
 import java.util.List;
 
-public class MainAdapter extends RecyclerView.Adapter<MainAdapter.MainViewHolder> {
+public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MainViewHolder> {
 
     private List<ServiceList_Model> servicelist;
 
@@ -29,7 +29,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.MainViewHolder
         }
     }
 
-    public MainAdapter(List<ServiceList_Model> servicelist) {
+    public HomeAdapter(List<ServiceList_Model> servicelist) {
         this.servicelist = servicelist;
     }
 
