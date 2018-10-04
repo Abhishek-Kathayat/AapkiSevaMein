@@ -7,8 +7,9 @@
     <string name="buy">Add to Cart</string>
     <string name="moveback">Back</string>
     <string name="home">Home</string>
-    <string name="cart">Your Cart</string>
+    <string name="cart">Cart</string>
     <string name="account">Account</string>
+    <string name="yourcart">Your Cart</string>
     <string name="user_name">User_Name</string>
     <string name="phonetext">Phone Number : </string>
     <string name="phonenumber">1111111111</string>

@@ -24,7 +24,7 @@
             android:id="@+id/text_bottomcart"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/cart"
+            android:text="@string/yourcart"
             android:textColor="@color/colorBlue"
             android:textAllCaps="false"
             android:textSize="30sp"
