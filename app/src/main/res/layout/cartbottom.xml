@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:orientation="vertical"
+    android:id="@+id/bottom_cart"
+    android:background="@color/colorWhite">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal">
+
+        <ImageView
+            android:id="@+id/image_bottomcart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_shopping_cart"
+            android:tint="@color/colorBlue"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/text_bottomcart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cart"
+            android:textColor="@color/colorBlue"
+            android:textAllCaps="false"
+            android:textSize="30sp"
+            android:layout_toEndOf="@id/image_bottomcart"
+            android:layout_marginStart="10dp"
+            android:layout_centerVertical="true"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/quantity_bottomcart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cartquantity"
+            android:textColor="@color/colorBlue"
+            android:textAllCaps="false"
+            android:textSize="25sp"
+            android:layout_toEndOf="@id/text_bottomcart"
+            android:layout_marginStart="10dp"
+            android:layout_centerVertical="true"
+            android:textStyle="bold"/>
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

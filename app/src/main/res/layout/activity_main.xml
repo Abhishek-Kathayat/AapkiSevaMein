@@ -17,14 +17,11 @@
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/navigation"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_gravity="top"
+        android:layout_height="80dp"
+        android:layout_gravity="bottom"
         android:background="@color/colorWhite"
         app:itemBackground="@color/colorWhite"
-        android:foreground="?attr/selectableItemBackground"
-        app:itemIconTint="@android:color/black"
-        app:itemTextColor="@android:color/black"
-        app:menu="@menu/navigation_main" />
+        app:menu="@menu/navigation_main"/>
 
 
 </android.support.design.widget.CoordinatorLayout>

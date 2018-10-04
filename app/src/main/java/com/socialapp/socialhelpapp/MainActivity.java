@@ -15,7 +15,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.socialapp.socialhelpapp.Fragments.AccountFragment;
 import com.socialapp.socialhelpapp.Fragments.HomeFragment;
+import com.socialapp.socialhelpapp.Fragments.ShopCartFragment;
 
 public class MainActivity extends AppCompatActivity {
     private ActionBar toolbar;
@@ -32,15 +34,6 @@ public class MainActivity extends AppCompatActivity {
         loadFragment(new HomeFragment());
 
         BottomNavigationMenuView menuView = (BottomNavigationMenuView) navigationView.getChildAt(0);
-
-        for (int i = 0; i < menuView.getChildCount(); i++) {
-            final View iconView = menuView.getChildAt(i).findViewById(android.support.design.R.id.icon);
-            final ViewGroup.LayoutParams layoutParams = iconView.getLayoutParams();
-            final DisplayMetrics displayMetrics = getResources().getDisplayMetrics();
-            layoutParams.height = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 35, displayMetrics);
-            layoutParams.width = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 35, displayMetrics);
-            iconView.setLayoutParams(layoutParams);
-        }
     }
 /*
 
@@ -56,9 +49,14 @@ public class MainActivity extends AppCompatActivity {
                     fragment = new HomeFragment();
                     loadFragment(fragment);
                     return true;
+                case R.id.navigation_cart:
+                    toolbar.setTitle("Cart");
+                    fragment = new ShopCartFragment();
+                    loadFragment(fragment);
+                    return true;
                 case R.id.navigation_user:
-                    toolbar.setTitle("User Details");
-                    fragment = new HomeFragment();
+                    toolbar.setTitle("Account");
+                    fragment = new AccountFragment();
                     loadFragment(fragment);
                     return true;
             }

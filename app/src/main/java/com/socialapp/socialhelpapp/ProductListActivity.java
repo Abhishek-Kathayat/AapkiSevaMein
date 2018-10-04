@@ -33,21 +33,21 @@ public class ProductListActivity extends AppCompatActivity {
     }
 
     private void prepareProducts() {
-        ProductList_Model product = new ProductList_Model("Product_1", "https://images.yourstory.com/2016/08/125-fall-in-love.png", "Rs. 50.00");
+        ProductList_Model product = new ProductList_Model("Product_1", "http://www.ultimatesource.toys/wp-content/uploads/2013/11/dummy-image-landscape-1-1024x800.jpg", "Rs. 50.00");
         productlist.add(product);
-        product = new ProductList_Model("Product_2", "https://images.yourstory.com/2016/08/125-fall-in-love.png", "Rs. 50.00");
+        product = new ProductList_Model("Product_2", "http://www.ultimatesource.toys/wp-content/uploads/2013/11/dummy-image-landscape-1-1024x800.jpg", "Rs. 50.00");
         productlist.add(product);
-        product = new ProductList_Model("Product_3", "https://images.yourstory.com/2016/08/125-fall-in-love.png", "Rs. 50.00");
+        product = new ProductList_Model("Product_3", "http://www.ultimatesource.toys/wp-content/uploads/2013/11/dummy-image-landscape-1-1024x800.jpg", "Rs. 50.00");
         productlist.add(product);
-        product = new ProductList_Model("Product_4", "https://images.yourstory.com/2016/08/125-fall-in-love.png", "Rs. 50.00");
+        product = new ProductList_Model("Product_4", "http://www.ultimatesource.toys/wp-content/uploads/2013/11/dummy-image-landscape-1-1024x800.jpg", "Rs. 50.00");
         productlist.add(product);
-        product = new ProductList_Model("Product_5", "https://images.yourstory.com/2016/08/125-fall-in-love.png", "Rs. 50.00");
+        product = new ProductList_Model("Product_5", "http://www.ultimatesource.toys/wp-content/uploads/2013/11/dummy-image-landscape-1-1024x800.jpg", "Rs. 50.00");
         productlist.add(product);
-        product = new ProductList_Model("Product_6", "https://images.yourstory.com/2016/08/125-fall-in-love.png", "Rs. 50.00");
+        product = new ProductList_Model("Product_6", "http://www.ultimatesource.toys/wp-content/uploads/2013/11/dummy-image-landscape-1-1024x800.jpg", "Rs. 50.00");
         productlist.add(product);
-        product = new ProductList_Model("Product_7", "https://images.yourstory.com/2016/08/125-fall-in-love.png", "Rs. 50.00");
+        product = new ProductList_Model("Product_7", "http://www.ultimatesource.toys/wp-content/uploads/2013/11/dummy-image-landscape-1-1024x800.jpg", "Rs. 50.00");
         productlist.add(product);
-        product = new ProductList_Model("Product_8", "https://images.yourstory.com/2016/08/125-fall-in-love.png", "Rs. 50.00");
+        product = new ProductList_Model("Product_8", "http://www.ultimatesource.toys/wp-content/uploads/2013/11/dummy-image-landscape-1-1024x800.jpg", "Rs. 50.00");
         productlist.add(product);
     }
 }

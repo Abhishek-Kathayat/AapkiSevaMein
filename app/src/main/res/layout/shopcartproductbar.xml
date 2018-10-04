@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/shopcartproductbar"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/scprodbar_prodimage"
+            android:layout_width="160dp"
+            android:layout_height="110dp"
+            android:layout_margin="5dp" />
+
+        <TextView
+            android:id="@+id/scprodbar_prodname"
+            android:layout_toEndOf="@id/scprodbar_prodimage"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="30dp"
+            android:text="@string/product_name"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/scprodbar_prodprice"
+            android:layout_below="@id/scprodbar_prodname"
+            android:layout_marginTop="7dp"
+            android:layout_toEndOf="@id/scprodbar_prodimage"
+            android:layout_marginStart="30dp"
+            android:text="@string/product_price"
+            android:textAllCaps="false"
+            android:textSize="15sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/scprodbar_prodquantity"
+            android:layout_below="@id/scprodbar_prodprice"
+            android:layout_marginTop="7dp"
+            android:layout_toEndOf="@id/scprodbar_prodimage"
+            android:layout_marginStart="30dp"
+            android:text="@string/product_quantity"
+            android:textAllCaps="false"
+            android:textSize="15sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

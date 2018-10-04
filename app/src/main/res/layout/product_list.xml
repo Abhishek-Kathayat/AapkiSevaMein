@@ -8,13 +8,22 @@
     tools:context=".ProductListActivity"
     android:background="@color/colorWhite">
 
-    <include
-        layout="@layout/search_bar"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/product_view"
-        android:scrollbars="vertical"
-        android:layout_height="match_parent"
-        android:layout_width="match_parent" />
+        <include
+            android:id="@+id/search_product"
+            layout="@layout/search_bar"/>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/product_view"
+            android:layout_below="@id/search_product"
+            android:scrollbars="vertical"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent" />
+
+    </RelativeLayout>
 
 </android.support.design.widget.CoordinatorLayout>

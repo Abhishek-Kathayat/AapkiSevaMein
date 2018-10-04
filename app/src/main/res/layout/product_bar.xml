@@ -13,32 +13,30 @@
         <ImageView
             android:id="@+id/Image_ProductBar"
             android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:background="@color/colorAccent"
-            android:layout_margin="5dp" />
+            android:layout_height="120dp" />
 
         <TextView
             android:id="@+id/Text_ProductBar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/product_name"
-            android:layout_toEndOf="@id/Image_ProductBar"
             android:layout_marginStart="15dp"
             android:layout_marginTop="10dp"
+            android:layout_toEndOf="@id/Image_ProductBar"
+            android:text="@string/product_name"
             android:textSize="25sp"
-            android:textColor="@color/colorBlack"/>
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/Price_ProductBar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/product_price"
-            android:layout_marginStart="15dp"
-            android:layout_toEndOf="@id/Image_ProductBar"
             android:layout_below="@id/Text_ProductBar"
-            android:layout_marginTop="30dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@id/Image_ProductBar"
+            android:text="@string/product_price"
             android:textSize="25sp"
-            android:textColor="@color/colorBlack"/>
+            android:textStyle="bold" />
 
     </RelativeLayout>
 
