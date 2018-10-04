@@ -13,6 +13,7 @@ import android.widget.TextView;
 import com.socialapp.socialhelpapp.Models.ServiceList_Model;
 import com.socialapp.socialhelpapp.R;
 import com.socialapp.socialhelpapp.ServiceActivity;
+import com.socialapp.socialhelpapp.TollFreeNumberActivity;
 
 import java.util.List;
 
@@ -50,7 +51,7 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MainViewHolder
         holder.container.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent in = new Intent(view.getContext(), ServiceActivity.class);
+                Intent in = new Intent(view.getContext(), TollFreeNumberActivity.class);
                 view.getContext().startActivity(in);
             }
         });

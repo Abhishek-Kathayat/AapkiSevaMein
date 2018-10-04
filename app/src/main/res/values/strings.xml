@@ -28,4 +28,9 @@
     <string name="checkout">Checkout</string>
     <string name="quantity">Quantity</string>
     <string name="cartquantity">(10)</string>
+    <string name="tollfree_text">Toll-Free Number 1</string>
+    <string name="tollfree_number">1800 180 180</string>
+    <string name="feedback_1">Suggestions and Feedback :</string>
+    <string name="feedback_review">Review :</string>
+    <string name="submit">Submit</string>
 </resources>

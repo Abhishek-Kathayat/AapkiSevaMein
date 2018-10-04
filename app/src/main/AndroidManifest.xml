@@ -21,6 +21,10 @@
         </activity>
         <activity android:name=".ProductDetailActivity">
         </activity>
+        <activity android:name=".TollFreeNumberActivity">
+        </activity>
+        <activity android:name=".FeedbackActivity">
+        </activity>
     </application>
 
 </manifest>

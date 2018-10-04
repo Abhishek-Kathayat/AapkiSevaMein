@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/feedbacktext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/feedback_1"
+            android:textColor="@color/colorBlue"
+            android:textSize="20sp"
+            android:layout_marginStart="10dp" />
+
+        <EditText
+            android:id="@+id/feedbackedittext"
+            android:layout_below="@id/feedbacktext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:lines="10"
+            android:scrollHorizontally="false"
+            android:background="@drawable/background_search"
+            android:inputType="textMultiLine"/>
+
+        <TextView
+            android:id="@+id/feedbackreview"
+            android:layout_below="@id/feedbackedittext"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/feedback_review"
+            android:textColor="@color/colorBlue"
+            android:textSize="20sp" />
+
+        <RatingBar
+            android:id="@+id/feedback_rating"
+            android:layout_below="@id/feedbackreview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_centerHorizontal="true"
+            android:progressTint="@color/colorBlue"
+            android:isIndicator="false"
+            android:stepSize="0.5"/>
+
+        <Button
+            android:id="@+id/feedback_submit"
+            android:layout_below="@id/feedback_rating"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="@string/submit"
+            android:textColor="@color/colorBlue"
+            android:textSize="20sp"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/background_search"
+            android:textAllCaps="false"/>
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
