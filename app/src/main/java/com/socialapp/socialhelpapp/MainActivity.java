@@ -20,17 +20,17 @@ import com.socialapp.socialhelpapp.Fragments.HomeFragment;
 import com.socialapp.socialhelpapp.Fragments.ShopCartFragment;
 
 public class MainActivity extends AppCompatActivity {
-    private ActionBar toolbar;
+    //private ActionBar toolbar;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        toolbar = getSupportActionBar();
+        //toolbar = getSupportActionBar();
 
         BottomNavigationView navigationView = (BottomNavigationView)findViewById(R.id.navigation);
         navigationView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-        toolbar.setTitle("Home");
+        //toolbar.setTitle("Home");
         loadFragment(new HomeFragment());
 
         BottomNavigationMenuView menuView = (BottomNavigationMenuView) navigationView.getChildAt(0);
@@ -45,17 +45,17 @@ public class MainActivity extends AppCompatActivity {
             Fragment fragment;
             switch (item.getItemId()) {
                 case R.id.navigation_home:
-                    toolbar.setTitle("Home");
+                    //toolbar.setTitle("Home");
                     fragment = new HomeFragment();
                     loadFragment(fragment);
                     return true;
                 case R.id.navigation_cart:
-                    toolbar.setTitle("Cart");
+                    //toolbar.setTitle("Cart");
                     fragment = new ShopCartFragment();
                     loadFragment(fragment);
                     return true;
                 case R.id.navigation_user:
-                    toolbar.setTitle("Account");
+                    //toolbar.setTitle("Account");
                     fragment = new AccountFragment();
                     loadFragment(fragment);
                     return true;

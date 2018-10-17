@@ -1,3 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <array name="languages">
+        <item>Select Language :</item>
+        <item>Hindi</item>
+        <item>English</item>
+        <item>Punjabi</item>
+        <item>Tamil</item>
+        <item>Bengali</item>
+    </array>
 </resources>

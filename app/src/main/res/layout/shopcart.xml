@@ -13,7 +13,14 @@
         android:layout_height="match_parent">
 
         <include
+            android:id="@+id/customtoolbar"
+            layout="@layout/titlebar"/>
+
+        <include
             android:id="@+id/cartscstatusbar"
+            android:layout_below="@id/customtoolbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
             layout="@layout/shopcartstatusbar"/>
 
         <android.support.v7.widget.RecyclerView
