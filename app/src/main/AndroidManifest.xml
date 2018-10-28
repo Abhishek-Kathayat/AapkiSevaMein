@@ -37,6 +37,8 @@
         </activity>
         <activity android:name=".EditDetailsActivity">
         </activity>
+        <activity android:name=".ChangePasswordActivity">
+        </activity>
     </application>
 
 </manifest>

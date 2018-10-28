@@ -41,4 +41,7 @@
     <string name="editdetails">Edit Details</string>
     <string name="save">Save</string>
     <string name="changepic">Change Profile Picture</string>
+    <string name="oldpassword">Old Password</string>
+    <string name="newpassword">New Password</string>
+    <string name="confirmpassword">Confirm Password</string>
 </resources>
