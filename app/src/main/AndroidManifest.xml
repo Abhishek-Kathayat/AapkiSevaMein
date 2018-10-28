@@ -35,6 +35,8 @@
         </activity>
         <activity android:name=".TitlebarActivity">
         </activity>
+        <activity android:name=".EditDetailsActivity">
+        </activity>
     </application>
 
 </manifest>

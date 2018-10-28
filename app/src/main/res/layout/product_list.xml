@@ -13,12 +13,7 @@
         android:layout_height="match_parent">
 
         <include
-            android:id="@+id/customtoolbar"
-            layout="@layout/titlebar"/>
-
-        <include
             android:id="@+id/search_product"
-            android:layout_below="@id/customtoolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             layout="@layout/search_bar"/>

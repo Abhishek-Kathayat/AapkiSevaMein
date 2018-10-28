@@ -8,11 +8,22 @@
     android:id="@+id/main_activity"
     android:orientation="vertical">
 
-    <FrameLayout
-        android:id="@+id/frame_container"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/customtoolbar"
+            layout="@layout/titlebar"/>
+
+        <FrameLayout
+            android:id="@+id/frame_container"
+            android:layout_below="@id/customtoolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    </RelativeLayout>
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/navigation"

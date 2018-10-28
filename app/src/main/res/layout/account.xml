@@ -11,7 +11,8 @@
         android:layout_height="wrap_content"
         tools:context="com.socialapp.socialhelpapp.Fragments.AccountFragment"
         android:id="@+id/account_fragment"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_marginTop="10dp">
 
         <RelativeLayout
             android:layout_width="match_parent"

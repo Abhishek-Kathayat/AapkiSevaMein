@@ -7,12 +7,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 
+import com.socialapp.socialhelpapp.EditDetailsActivity;
 import com.socialapp.socialhelpapp.FeedbackActivity;
 import com.socialapp.socialhelpapp.OrderListActivity;
 import com.socialapp.socialhelpapp.R;
 
 public class AccountFragment extends Fragment{
+    public ImageButton editdetails;
     public Button feedbackbutton;
     public Button orders;
 
@@ -21,8 +24,16 @@ public class AccountFragment extends Fragment{
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.account, container, false);
 
+        editdetails = view.findViewById(R.id.account_editinfo);
         feedbackbutton = view.findViewById(R.id.account_feedback);
         orders = view.findViewById(R.id.account_orders);
+
+        editdetails.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startdetaileditactivity();
+            }
+        });
 
         feedbackbutton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,6 +50,11 @@ public class AccountFragment extends Fragment{
         });
 
         return view;
+    }
+
+    public void startdetaileditactivity() {
+        Intent in = new Intent(this.getContext(), EditDetailsActivity.class);
+        startActivity(in);
     }
 
     public void startfeedbackActivity() {

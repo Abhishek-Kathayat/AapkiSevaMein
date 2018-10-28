@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SocialHelpApp</string>
+    <string name="app_name">AapkiSevaMein</string>
     <string name="product_name">Product_Name</string>
     <string name="product_price">Rs. 50.00</string>
     <string name="product_quantity">10kg</string>
@@ -10,12 +10,15 @@
     <string name="cart">Cart</string>
     <string name="account">Account</string>
     <string name="yourcart">Your Cart</string>
-    <string name="user_name">User_Name</string>
+    <string name="user_name">User Name</string>
     <string name="phonetext">Phone Number : </string>
+    <string name="phonenumtext">Phone Number</string>
     <string name="phonenumber">1111111111</string>
     <string name="emailtext">E-mail : </string>
+    <string name="email1text">E-mail</string>
     <string name="email">abc@gmail.com</string>
     <string name="delivaddtext">Delivery Address : </string>
+    <string name="delivaddresstext">Delivery Address</string>
     <string name="delivaddress">Lorem ipsum dolor sit amet</string>
     <string name="yourorder">Your Orders</string>
     <string name="feedback">Suggestions/Feedbacks</string>
@@ -35,4 +38,7 @@
     <string name="feedback_review">Review :</string>
     <string name="submit">Submit</string>
     <string name="product_buydate">25/08/2017</string>
+    <string name="editdetails">Edit Details</string>
+    <string name="save">Save</string>
+    <string name="changepic">Change Profile Picture</string>
 </resources>

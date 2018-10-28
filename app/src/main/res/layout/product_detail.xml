@@ -11,14 +11,9 @@
         android:layout_height="match_parent"
         android:layout_width="match_parent">
 
-        <include
-            android:id="@+id/customtoolbar"
-            layout="@layout/titlebar"/>
-
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@id/customtoolbar"
             android:layout_marginBottom="105dp">
 
             <RelativeLayout
