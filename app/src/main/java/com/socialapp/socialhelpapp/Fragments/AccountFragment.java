@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
 
+import com.socialapp.socialhelpapp.ChangePasswordActivity;
 import com.socialapp.socialhelpapp.EditDetailsActivity;
 import com.socialapp.socialhelpapp.FeedbackActivity;
 import com.socialapp.socialhelpapp.OrderListActivity;
@@ -17,6 +18,7 @@ import com.socialapp.socialhelpapp.R;
 public class AccountFragment extends Fragment{
     public ImageButton editdetails;
     public Button feedbackbutton;
+    public Button credentialbutton;
     public Button orders;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -26,12 +28,20 @@ public class AccountFragment extends Fragment{
 
         editdetails = view.findViewById(R.id.account_editinfo);
         feedbackbutton = view.findViewById(R.id.account_feedback);
+        credentialbutton = view.findViewById(R.id.account_changepasspin);
         orders = view.findViewById(R.id.account_orders);
 
         editdetails.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startdetaileditactivity();
+            }
+        });
+
+        credentialbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                changepasswordpin();
             }
         });
 
@@ -54,6 +64,11 @@ public class AccountFragment extends Fragment{
 
     public void startdetaileditactivity() {
         Intent in = new Intent(this.getContext(), EditDetailsActivity.class);
+        startActivity(in);
+    }
+
+    public void changepasswordpin() {
+        Intent in = new Intent(this.getContext(), ChangePasswordActivity.class);
         startActivity(in);
     }
 
