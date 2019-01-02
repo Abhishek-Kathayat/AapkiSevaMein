@@ -24,7 +24,7 @@
     <string name="feedback">Suggestions/Feedbacks</string>
     <string name="changepasspin">Change Password/Pin</string>
     <string name="logout">Log Out</string>
-    <string name="carttotaltext">Cart Total : </string>
+    <string name="carttotaltext">Cart Subtotal : </string>
     <string name="carttotalamt">Rs. 500.00</string>
     <string name="carttotalitemtext">Total Items : </string>
     <string name="carttotalitemamt">30</string>
@@ -44,4 +44,7 @@
     <string name="oldpassword">Old Password</string>
     <string name="newpassword">New Password</string>
     <string name="confirmpassword">Confirm Password</string>
+    <string name="changepassword">Change Password</string>
+    <string name="deleteproduct">Delete</string>
+    <string name="default_quantity">1</string>
 </resources>

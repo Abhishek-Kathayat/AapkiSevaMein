@@ -5,53 +5,97 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:id="@+id/shopcartproductbar"
+    android:layout_marginTop="10dp"
     android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <ImageView
-            android:id="@+id/scprodbar_prodimage"
-            android:layout_width="160dp"
-            android:layout_height="110dp"
-            android:layout_margin="5dp" />
+        <RelativeLayout
+            android:id="@+id/shopcartproductbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/scprodbar_prodname"
-            android:layout_toEndOf="@id/scprodbar_prodimage"
-            android:layout_marginTop="15dp"
-            android:layout_marginStart="30dp"
-            android:text="@string/product_name"
-            android:textAllCaps="false"
-            android:textSize="20sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textStyle="bold"/>
+            <ImageView
+                android:id="@+id/scprodbar_prodimage"
+                android:layout_width="160dp"
+                android:layout_height="110dp"
+                android:layout_margin="5dp" />
 
-        <TextView
-            android:id="@+id/scprodbar_prodprice"
-            android:layout_below="@id/scprodbar_prodname"
-            android:layout_marginTop="7dp"
-            android:layout_toEndOf="@id/scprodbar_prodimage"
-            android:layout_marginStart="30dp"
-            android:text="@string/product_price"
-            android:textAllCaps="false"
-            android:textSize="15sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/scprodbar_prodname"
+                android:layout_toEndOf="@id/scprodbar_prodimage"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="30dp"
+                android:text="@string/product_name"
+                android:textAllCaps="false"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"/>
 
-        <TextView
-            android:id="@+id/scprodbar_prodquantity"
-            android:layout_below="@id/scprodbar_prodprice"
-            android:layout_marginTop="7dp"
-            android:layout_toEndOf="@id/scprodbar_prodimage"
-            android:layout_marginStart="30dp"
-            android:text="@string/product_quantity"
-            android:textAllCaps="false"
-            android:textSize="15sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/scprodbar_prodprice"
+                android:layout_below="@id/scprodbar_prodname"
+                android:layout_marginTop="7dp"
+                android:layout_toEndOf="@id/scprodbar_prodimage"
+                android:layout_marginStart="30dp"
+                android:text="@string/product_price"
+                android:textAllCaps="false"
+                android:textSize="15sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/scprodbar_prodquantity"
+                android:layout_below="@id/scprodbar_prodprice"
+                android:layout_marginTop="7dp"
+                android:layout_toEndOf="@id/scprodbar_prodimage"
+                android:layout_marginStart="30dp"
+                android:text="@string/product_quantity"
+                android:textAllCaps="false"
+                android:textSize="15sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/quantity_edit"
+                android:layout_width="80dp"
+                android:layout_height="48dp"
+                android:text="@string/default_quantity"
+                android:background="@drawable/background_edittext"
+                android:layout_below="@id/scprodbar_prodimage"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:inputType="number"/>
+
+            <Button
+                android:id="@+id/delete_product"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/deleteproduct"
+                android:layout_below="@id/scprodbar_prodimage"
+                android:layout_toEndOf="@id/quantity_edit"
+                android:layout_margin="10dp"
+                android:background="@drawable/background_buttons"
+                android:textColor="@color/colorBlue"
+                android:textSize="20sp"
+                android:textAllCaps="false"/>
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view_line"
+            android:layout_below="@id/shopcartproductbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorGrey"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"/>
 
     </RelativeLayout>
 

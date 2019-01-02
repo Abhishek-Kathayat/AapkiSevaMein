@@ -8,23 +8,112 @@
     android:orientation="vertical"
     android:layout_marginBottom="75dp">
 
-    <RelativeLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
-        <include
-            android:id="@+id/cartscstatusbar"
-            android:layout_height="wrap_content"
+        <RelativeLayout
             android:layout_width="match_parent"
-            layout="@layout/shopcartstatusbar"/>
+            android:layout_height="wrap_content">
 
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/shopcartlist"
-            android:layout_below="@id/cartscstatusbar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:scrollbars="vertical"/>
+            <RelativeLayout
+                android:id="@+id/shopcartstatusbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="10dp">
 
-    </RelativeLayout>
+                <TextView
+                    android:id="@+id/scstatusbar_carttotaltext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/carttotaltext"
+                    android:textSize="22sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/scstatusbar_carttotalamt"
+                    android:layout_toEndOf="@id/scstatusbar_carttotaltext"
+                    android:layout_marginStart="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/carttotalamt"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/scstatusbar_totalitemtext"
+                    android:layout_below="@id/scstatusbar_carttotaltext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/carttotalitemtext"
+                    android:textSize="22sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/scstatusbar_totalitemamt"
+                    android:layout_below="@id/scstatusbar_carttotaltext"
+                    android:layout_toEndOf="@id/scstatusbar_totalitemtext"
+                    android:layout_marginStart="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/carttotalitemamt"
+                    android:textSize="22sp"/>
+
+                <Button
+                    android:id="@+id/scstatusbar_prodlist"
+                    android:layout_below="@id/scstatusbar_totalitemtext"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/products"
+                    android:drawableStart="@drawable/ic_shopping_basket"
+                    android:drawableTint="@color/colorBlue"
+                    android:drawablePadding="5dp"
+                    android:layout_marginStart="10dp"
+                    android:textColor="@color/colorBlue"
+                    android:textSize="20sp"
+                    android:background="@android:color/transparent"
+                    android:textAllCaps="false"/>
+
+                <Button
+                    android:id="@+id/scstatusbar_checkout"
+                    android:layout_below="@id/scstatusbar_totalitemtext"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/checkout"
+                    android:drawablePadding="5dp"
+                    android:layout_marginEnd="15dp"
+                    android:drawableStart="@drawable/ic_credit_card"
+                    android:drawableTint="@color/colorBlue"
+                    android:textColor="@color/colorBlue"
+                    android:textSize="20sp"
+                    android:background="@android:color/transparent"
+                    android:textAllCaps="false"/>
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/view_line"
+                android:layout_below="@id/shopcartstatusbar"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorGrey"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/shopcartlist"
+                android:layout_below="@id/view_line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
 
 </android.support.design.widget.CoordinatorLayout>
