@@ -1,5 +1,6 @@
 package com.socialapp.socialhelpapp;
 
+import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -27,17 +28,36 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //toolbar = getSupportActionBar();
+        boolean fragselect = false;
 
-        BottomNavigationView navigationView = (BottomNavigationView)findViewById(R.id.navigation);
-        navigationView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-        //toolbar.setTitle("Home");
-        loadFragment(new HomeFragment());
+        try {
+            fragselect = getIntent().getExtras().getBoolean("fragload");
+        }
+        catch(Exception e) {
+            fragselect = false;
+        }
 
-        BottomNavigationMenuView menuView = (BottomNavigationMenuView) navigationView.getChildAt(0);
+        if(fragselect) {
+            BottomNavigationView navigationView = (BottomNavigationView) findViewById(R.id.navigation);
+            navigationView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+            //toolbar.setTitle("Home");
+            loadFragment(new ShopCartFragment());
+            navigationView.getMenu().getItem(1).setChecked(true);
+
+            BottomNavigationMenuView menuView = (BottomNavigationMenuView) navigationView.getChildAt(0);
+            fragselect = false;
+        }
+        else {
+            BottomNavigationView navigationView = (BottomNavigationView) findViewById(R.id.navigation);
+            navigationView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+            //toolbar.setTitle("Home");
+            loadFragment(new HomeFragment());
+
+            BottomNavigationMenuView menuView = (BottomNavigationMenuView) navigationView.getChildAt(0);
+        }
+
     }
-/*
 
-*/
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
         @Override

@@ -1,14 +1,18 @@
 package com.socialapp.socialhelpapp.Models;
 
+import com.google.gson.annotations.SerializedName;
+
 public class ServiceList_Model {
+    @SerializedName("id")
+    private String id;
+    @SerializedName("name")
     private String servicename;
-
-    public ServiceList_Model() {
-    }
-
-    public ServiceList_Model(String servicename) {
-        this.servicename = servicename;
-    }
+    @SerializedName("type")
+    private String type;
+    @SerializedName("subType")
+    private String subType;
+    @SerializedName("__v")
+    private String v;
 
     public String getServicename() {
         return servicename;
@@ -17,4 +21,37 @@ public class ServiceList_Model {
     public void setServicename(String servicename) {
         this.servicename = servicename;
     }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public String getSubType() {
+        return subType;
+    }
+
+    public void setSubType(String subType) {
+        this.subType = subType;
+    }
+
+    public String getV() {
+        return v;
+    }
+
+    public void setV(String v) {
+        this.v = v;
+    }
+
 }

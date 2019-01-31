@@ -26,6 +26,7 @@ public class ProductDetailActivity extends AppCompatActivity implements AdapterV
     private TextView productName;
     private TextView productPrice;
     private ImageView productImage;
+    private CoordinatorLayout bottom_cart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +34,8 @@ public class ProductDetailActivity extends AppCompatActivity implements AdapterV
         setContentView(R.layout.product_detail);
 
         final Spinner spinner = (Spinner)findViewById(R.id.proddetail_Spinner);
+        bottom_cart = (CoordinatorLayout)findViewById(R.id.Prodetail_Relay01);
+
         spinner.setOnItemSelectedListener(this);
 
         List<String> quantity = new ArrayList<String>();
@@ -56,6 +59,13 @@ public class ProductDetailActivity extends AppCompatActivity implements AdapterV
             productName.setText(parcelable.mName);
             productPrice.setText(parcelable.mPrice);
         }
+
+        bottom_cart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startUserCart();
+            }
+        });
     }
 
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -64,6 +74,12 @@ public class ProductDetailActivity extends AppCompatActivity implements AdapterV
     }
 
     public void onNothingSelected(AdapterView<?> parent) {
+    }
+
+    public void startUserCart() {
+        Intent in = new Intent(this.getApplicationContext(), MainActivity.class);
+        in.putExtra("fragload", true);
+        startActivity(in);
     }
 
 }

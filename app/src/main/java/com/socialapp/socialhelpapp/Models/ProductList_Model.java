@@ -1,7 +1,14 @@
 package com.socialapp.socialhelpapp.Models;
 
+import com.google.gson.annotations.SerializedName;
+
 public class ProductList_Model {
-    private String productname, productprice, productimage;
+    @SerializedName("name")
+    private String productname;
+    @SerializedName("price")
+    private String productprice;
+    @SerializedName("image")
+    private String productimage;
 
     public ProductList_Model() {
     }
