@@ -8,13 +8,21 @@ import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 
 import com.socialapp.socialhelpapp.Adapters.ProductAdapter;
 import com.socialapp.socialhelpapp.Models.ProductList_Model;
+import com.socialapp.socialhelpapp.Models.ServiceList_Model;
+import com.socialapp.socialhelpapp.rest.ApiClient;
+import com.socialapp.socialhelpapp.rest.ApiInterface;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class ProductListActivity extends AppCompatActivity {
     private List<ProductList_Model> productlist = new ArrayList<>();
@@ -35,33 +43,32 @@ public class ProductListActivity extends AppCompatActivity {
         mRecyclerView.setAdapter(mAdapter);
         layout_cart = (CoordinatorLayout)findViewById(R.id.bottomcart_products);
 
+        getProducts();
+
         layout_cart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 showUserCart();
             }
         });
-
-        prepareProducts();
     }
 
-    private void prepareProducts() {
-        ProductList_Model product = new ProductList_Model("Product_1", "http://www.ultimatesource.toys/wp-content/uploads/2013/11/dummy-image-landscape-1-1024x800.jpg", "Rs. 50.00");
-        productlist.add(product);
-        product = new ProductList_Model("Product_2", "http://www.ultimatesource.toys/wp-content/uploads/2013/11/dummy-image-landscape-1-1024x800.jpg", "Rs. 50.00");
-        productlist.add(product);
-        product = new ProductList_Model("Product_3", "http://www.ultimatesource.toys/wp-content/uploads/2013/11/dummy-image-landscape-1-1024x800.jpg", "Rs. 50.00");
-        productlist.add(product);
-        product = new ProductList_Model("Product_4", "http://www.ultimatesource.toys/wp-content/uploads/2013/11/dummy-image-landscape-1-1024x800.jpg", "Rs. 50.00");
-        productlist.add(product);
-        product = new ProductList_Model("Product_5", "http://www.ultimatesource.toys/wp-content/uploads/2013/11/dummy-image-landscape-1-1024x800.jpg", "Rs. 50.00");
-        productlist.add(product);
-        product = new ProductList_Model("Product_6", "http://www.ultimatesource.toys/wp-content/uploads/2013/11/dummy-image-landscape-1-1024x800.jpg", "Rs. 50.00");
-        productlist.add(product);
-        product = new ProductList_Model("Product_7", "http://www.ultimatesource.toys/wp-content/uploads/2013/11/dummy-image-landscape-1-1024x800.jpg", "Rs. 50.00");
-        productlist.add(product);
-        product = new ProductList_Model("Product_8", "http://www.ultimatesource.toys/wp-content/uploads/2013/11/dummy-image-landscape-1-1024x800.jpg", "Rs. 50.00");
-        productlist.add(product);
+    private void getProducts() {
+        ApiInterface apiInterface = ApiClient.getClient().create(ApiInterface.class);
+        Call<List<ProductList_Model>> call = apiInterface.getProducts();
+        call.enqueue(new Callback<List<ProductList_Model>>() {
+            @Override
+            public void onResponse(Call<List<ProductList_Model>> call, Response<List<ProductList_Model>> response) {
+                List<ProductList_Model> products = response.body();
+                ProductAdapter productAdapter = new ProductAdapter(products);
+                mRecyclerView.setAdapter(productAdapter);
+            }
+
+            @Override
+            public void onFailure(Call<List<ProductList_Model>> call, Throwable t) {
+                Log.d("Error", t.getMessage());
+            }
+        });
     }
 
     private void showUserCart() {
