@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 
 import com.socialapp.socialhelpapp.Adapters.HomeAdapter;
 import com.socialapp.socialhelpapp.MainActivity;
@@ -28,6 +29,7 @@ public class HomeFragment extends Fragment {
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
+    private ProgressBar progressBar;
 
     public HomeFragment() {
     }
@@ -55,11 +57,9 @@ public class HomeFragment extends Fragment {
         mRecyclerView.setLayoutManager(mLayoutManager);
         mAdapter = new HomeAdapter(servicelist);
         mRecyclerView.setAdapter(mAdapter);
+        progressBar = view.findViewById(R.id.progress_bar);
+        progressBar.setVisibility(View.VISIBLE);
         getServices();
-
-        for(int i = 0; i < servicelist.size(); ++i) {
-            System.out.print(servicelist.get(i) + " ");
-        }
 
         return view;
     }
@@ -72,6 +72,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onResponse(Call<List<ServiceList_Model>> call, Response<List<ServiceList_Model>> response) {
                 List<ServiceList_Model> services = response.body();
+                progressBar.setVisibility(View.GONE);
                 HomeAdapter homeAdapter = new HomeAdapter(services);
                 mRecyclerView.setAdapter(homeAdapter);
             }

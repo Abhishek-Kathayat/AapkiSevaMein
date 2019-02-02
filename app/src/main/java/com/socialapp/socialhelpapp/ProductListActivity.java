@@ -10,6 +10,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
+import android.widget.ProgressBar;
 
 import com.socialapp.socialhelpapp.Adapters.ProductAdapter;
 import com.socialapp.socialhelpapp.Models.ProductList_Model;
@@ -30,6 +31,7 @@ public class ProductListActivity extends AppCompatActivity {
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
     private CoordinatorLayout layout_cart;
+    private ProgressBar progressBar;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -37,6 +39,8 @@ public class ProductListActivity extends AppCompatActivity {
         setContentView(R.layout.product_list);
 
         mRecyclerView = findViewById(R.id.product_view);
+        progressBar = findViewById(R.id.progress_bar_products);
+        progressBar.setVisibility(View.VISIBLE);
         mAdapter = new ProductAdapter(productlist);
         mLayoutManager = new LinearLayoutManager(getApplicationContext());
         mRecyclerView.setLayoutManager(mLayoutManager);
@@ -60,6 +64,7 @@ public class ProductListActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<List<ProductList_Model>> call, Response<List<ProductList_Model>> response) {
                 List<ProductList_Model> products = response.body();
+                progressBar.setVisibility(View.GONE);
                 ProductAdapter productAdapter = new ProductAdapter(products);
                 mRecyclerView.setAdapter(productAdapter);
             }
