@@ -39,6 +39,8 @@
         </activity>
         <activity android:name=".ChangePasswordActivity">
         </activity>
+        <activity android:name=".CheckoutActivity">
+        </activity>
     </application>
 
 </manifest>
