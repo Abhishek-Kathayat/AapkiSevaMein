@@ -160,14 +160,14 @@
         android:id="@+id/button14"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:textColor="@color/colorWhite"
         android:layout_alignParentEnd="true"
-        android:textSize="20dp"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="100dp"
         android:backgroundTint="@color/colorBlue"
-        android:text="PROCEED" />
+        android:text="PROCEED"
+        android:textColor="@color/colorWhite"
+        android:textSize="20dp" />
 
 
 </RelativeLayout>
