@@ -1,6 +1,173 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="5dp"
+        android:text="Payment Information"
+        android:textAlignment="center"
+        android:textColor="@color/colorBlue"
+        android:textSize="30dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="5dp"
+        android:orientation="vertical">
+
+
+        <android.support.v7.widget.GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp">
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:padding="5dp"
+                android:layout_height="wrap_content"
+                android:text="Order #"
+                app:layout_column="0"
+                android:textSize="20dp"
+                app:layout_row="1" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:textSize="20dp"
+                android:text="A443H128F"
+                app:layout_column="19"
+                app:layout_row="1" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Order Amount"
+                app:layout_column="0"                android:textSize="20dp"
+                android:padding="5dp"
+
+                app:layout_row="2" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1.00"                android:textSize="20dp"
+                android:padding="5dp"
+
+                app:layout_column="19"
+                app:layout_row="2" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:padding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Service Cahrges"
+                app:layout_column="0"                android:textSize="20dp"
+
+                app:layout_row="3" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:padding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="INR 1.00"
+                app:layout_column="19"                android:textSize="20dp"
+
+                app:layout_row="3" />
+
+            <TextView
+                android:padding="5dp"
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Amount"
+                app:layout_column="0"                android:textSize="20dp"
+
+                app:layout_row="4" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:padding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="INR 10.00"
+                app:layout_column="19"                android:textSize="20dp"
+
+                app:layout_row="4" />
+        </android.support.v7.widget.GridLayout>
+    </LinearLayout>
+
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="260dp"
+        android:layout_marginBottom="210dp">
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:textAllCaps="true"
+            android:buttonTint="@color/colorBlue"
+            android:textColor="@color/colorBlue"
+            android:layout_weight="1"
+            android:text="Debit card" />
+
+        <RadioButton
+            android:layout_marginLeft="20dp"
+            android:id="@+id/radioButton2"
+            android:layout_width="match_parent"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:textAllCaps="true"
+            android:buttonTint="@color/colorBlue"
+            android:textColor="@color/colorBlue"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="paytm" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/button14"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="100dp"
+        android:backgroundTint="@color/colorBlue"
+        android:text="PROCEED"
+        android:textColor="@color/colorWhite"
+        android:textSize="20dp" />
+
+
+</RelativeLayout>

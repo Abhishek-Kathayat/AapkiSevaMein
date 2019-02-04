@@ -4,9 +4,9 @@
     <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/logo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/logo"
         android:supportsRtl="true"
         android:theme="@style/CustomBar">
         <activity android:name=".MainActivity">
@@ -38,6 +38,14 @@
         <activity android:name=".EditDetailsActivity">
         </activity>
         <activity android:name=".ChangePasswordActivity">
+        </activity>
+        <activity android:name=".CheckoutActivity">
+        </activity>
+        <activity android:name=".checkoutAddress">
+        </activity>
+        <activity android:name=".Fragments.PaytmFragment">
+        </activity>
+        <activity android:name=".Fragments.DebitCardFragment">
         </activity>
     </application>
 
