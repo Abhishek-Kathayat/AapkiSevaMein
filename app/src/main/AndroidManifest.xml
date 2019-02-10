@@ -41,12 +41,6 @@
         </activity>
         <activity android:name=".CheckoutActivity">
         </activity>
-        <activity android:name=".checkoutAddress">
-        </activity>
-        <activity android:name=".Fragments.PaytmFragment">
-        </activity>
-        <activity android:name=".Fragments.DebitCardFragment">
-        </activity>
         <meta-data
             android:name="com.razorpay.ApiKey"
             android:value="rzp_test_EQnkJzbycLerPq"/>
