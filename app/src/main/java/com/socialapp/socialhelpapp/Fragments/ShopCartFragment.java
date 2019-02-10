@@ -10,6 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import com.socialapp.socialhelpapp.Adapters.CartAdapter;
 import com.socialapp.socialhelpapp.Adapters.HomeAdapter;
@@ -23,12 +25,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ShopCartFragment extends Fragment {
-    private List<CartList_Model> cartlist = new ArrayList<>();
+    public static List<CartList_Model> cartlist = new ArrayList<>();
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
     private Button products;
     private Button checkout;
+    private TextView totalproducts;
 
     public ShopCartFragment() {
     }
@@ -54,6 +57,7 @@ public class ShopCartFragment extends Fragment {
         products = view.findViewById(R.id.scstatusbar_prodlist);
         checkout = view.findViewById(R.id.scstatusbar_checkout);
         mRecyclerView = view.findViewById(R.id.shopcartlist);
+        totalproducts = view.findViewById(R.id.scstatusbar_totalitemamt);
         mAdapter = new CartAdapter(cartlist);
         mLayoutManager = new LinearLayoutManager(getActivity());
         mRecyclerView.setItemAnimator(new DefaultItemAnimator());
@@ -75,33 +79,11 @@ public class ShopCartFragment extends Fragment {
             }
         });
 
-        prepareCart();
+        totalproducts.setText(Integer.toString(cartlist.size()));
 
         return view;
     }
 
-    private void prepareCart() {
-        CartList_Model cartList_model = new CartList_Model("Product_1", "http://www.ultimatesource.toys/wp-content/uploads/2013/11/dummy-image-landscape-1-1024x800.jpg", "Rs. 50.00", "10kgs");
-        cartlist.add(cartList_model);
-        cartList_model = new CartList_Model("Product_2", "http://www.ultimatesource.toys/wp-content/uploads/2013/11/dummy-image-landscape-1-1024x800.jpg", "Rs. 50.00", "10kgs");
-        cartlist.add(cartList_model);
-        cartList_model = new CartList_Model("Product_3", "http://www.ultimatesource.toys/wp-content/uploads/2013/11/dummy-image-landscape-1-1024x800.jpg", "Rs. 50.00", "10kgs");
-        cartlist.add(cartList_model);
-        cartList_model = new CartList_Model("Product_4", "http://www.ultimatesource.toys/wp-content/uploads/2013/11/dummy-image-landscape-1-1024x800.jpg", "Rs. 50.00", "10kgs");
-        cartlist.add(cartList_model);
-        cartList_model = new CartList_Model("Product_5", "http://www.ultimatesource.toys/wp-content/uploads/2013/11/dummy-image-landscape-1-1024x800.jpg", "Rs. 50.00", "10kgs");
-        cartlist.add(cartList_model);
-        cartList_model = new CartList_Model("Product_6", "http://www.ultimatesource.toys/wp-content/uploads/2013/11/dummy-image-landscape-1-1024x800.jpg", "Rs. 50.00", "10kgs");
-        cartlist.add(cartList_model);
-        cartList_model = new CartList_Model("Product_7", "http://www.ultimatesource.toys/wp-content/uploads/2013/11/dummy-image-landscape-1-1024x800.jpg", "Rs. 50.00", "10kgs");
-        cartlist.add(cartList_model);
-        cartList_model = new CartList_Model("Product_8", "http://www.ultimatesource.toys/wp-content/uploads/2013/11/dummy-image-landscape-1-1024x800.jpg", "Rs. 50.00", "10kgs");
-        cartlist.add(cartList_model);
-        cartList_model = new CartList_Model("Product_9", "http://www.ultimatesource.toys/wp-content/uploads/2013/11/dummy-image-landscape-1-1024x800.jpg", "Rs. 50.00", "10kgs");
-        cartlist.add(cartList_model);
-        cartList_model = new CartList_Model("Product_10", "http://www.ultimatesource.toys/wp-content/uploads/2013/11/dummy-image-landscape-1-1024x800.jpg", "Rs. 50.00", "10kgs");
-        cartlist.add(cartList_model);
-    }
     private void showproducts() {
         Intent in = new Intent(this.getContext(), ProductListActivity.class);
         startActivity(in);

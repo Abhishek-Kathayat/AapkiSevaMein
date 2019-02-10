@@ -63,7 +63,6 @@
                 android:id="@+id/quantity_edit"
                 android:layout_width="80dp"
                 android:layout_height="48dp"
-                android:text="@string/default_quantity"
                 android:background="@drawable/background_edittext"
                 android:layout_below="@id/scprodbar_prodimage"
                 android:layout_marginStart="20dp"

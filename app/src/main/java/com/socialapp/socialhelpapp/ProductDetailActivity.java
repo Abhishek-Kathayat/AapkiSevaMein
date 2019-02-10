@@ -8,12 +8,16 @@ import android.view.View;
 import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.socialapp.socialhelpapp.Fragments.ShopCartFragment;
+import com.socialapp.socialhelpapp.Models.CartList_Model;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -26,7 +30,11 @@ public class ProductDetailActivity extends AppCompatActivity implements AdapterV
     private TextView productName;
     private TextView productPrice;
     private ImageView productImage;
+    private TextView quantity_cart;
+    private Button buybutton;
     private CoordinatorLayout bottom_cart;
+    private EditText quantity;
+    private int productQuantity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +43,28 @@ public class ProductDetailActivity extends AppCompatActivity implements AdapterV
 
         final Spinner spinner = (Spinner)findViewById(R.id.proddetail_Spinner);
         bottom_cart = (CoordinatorLayout)findViewById(R.id.Prodetail_Relay01);
+        buybutton = (Button)findViewById(R.id.buy_button);
+        quantity = (EditText)findViewById(R.id.prodquantity_change);
+
+        buybutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if((quantity.getText().toString()).equals("")) {
+                    productQuantity = 0;
+                }
+                else {
+                    productQuantity = Integer.parseInt(quantity.getText().toString());
+                }
+
+                if(productQuantity > 0) {
+                    addToCart();
+                }
+                else {
+                    Toast.makeText(getApplicationContext(), "Please select a valid quantity "+productQuantity, Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
 
         spinner.setOnItemSelectedListener(this);
 
@@ -80,6 +110,12 @@ public class ProductDetailActivity extends AppCompatActivity implements AdapterV
         Intent in = new Intent(this.getApplicationContext(), MainActivity.class);
         in.putExtra("fragload", true);
         startActivity(in);
+    }
+
+    public void addToCart() {
+        Toast.makeText(getApplicationContext(), "Item added to Cart", Toast.LENGTH_SHORT).show();
+        CartList_Model cartList_model = new CartList_Model(productName.getText().toString(), productImage.toString(), productPrice.getText().toString(), Integer.toString(productQuantity));
+        ShopCartFragment.cartlist.add(cartList_model);
     }
 
 }

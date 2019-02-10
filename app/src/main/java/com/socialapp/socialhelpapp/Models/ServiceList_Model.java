@@ -1,5 +1,7 @@
 package com.socialapp.socialhelpapp.Models;
 
+import android.widget.ImageView;
+
 import com.google.gson.annotations.SerializedName;
 
 public class ServiceList_Model {
@@ -11,8 +13,8 @@ public class ServiceList_Model {
     private String type;
     @SerializedName("subType")
     private String subType;
-    @SerializedName("__v")
-    private String v;
+    @SerializedName("image")
+    private String imageurl;
 
     public String getServicename() {
         return servicename;
@@ -46,12 +48,11 @@ public class ServiceList_Model {
         this.subType = subType;
     }
 
-    public String getV() {
-        return v;
+    public String getImageUrl() {
+        return imageurl;
     }
 
-    public void setV(String v) {
-        this.v = v;
+    public void setImageUrl(String imageurl) {
+        this.imageurl = imageurl;
     }
-
 }

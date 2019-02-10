@@ -7,6 +7,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -26,9 +27,11 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
     private List<CartList_Model> cartlist;
 
     public static class CartViewHolder extends RecyclerView.ViewHolder {
-        public TextView mNameView, mPriceView, mQuantityView;
-        public ImageView mImageView;
-        public CoordinatorLayout container;
+        private TextView mNameView, mPriceView, mQuantityView, mEditQuantity;
+        private ImageView mImageView;
+        private CoordinatorLayout container;
+        private Button delete_button;
+
         public CartViewHolder(View view) {
             super(view);
             mNameView = view.findViewById(R.id.scprodbar_prodname);
@@ -36,6 +39,19 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
             mQuantityView = view.findViewById(R.id.scprodbar_prodquantity);
             mImageView = view.findViewById(R.id.scprodbar_prodimage);
             container = view.findViewById(R.id.shopcartproductbar);
+            mEditQuantity = view.findViewById(R.id.quantity_edit);
+            delete_button = view.findViewById(R.id.delete_product);
+
+            delete_button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    deleteproduct();
+                }
+            });
+        }
+
+        private void deleteproduct() {
+
         }
     }
 
@@ -58,6 +74,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
         holder.mPriceView.setText(cart.getProductprice());
         holder.mQuantityView.setText(cart.getProductquantity());
         Glide.with(holder.mImageView.getContext()).load(cart.getProductimage()).into(holder.mImageView);
+        holder.mEditQuantity.setText(cart.getProductquantity());
 
         holder.container.setOnClickListener(new View.OnClickListener() {
             @Override

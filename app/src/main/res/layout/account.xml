@@ -21,8 +21,7 @@
             <ImageView
                 android:id="@+id/account_image"
                 android:layout_width="match_parent"
-                android:layout_height="175dp"
-                android:src="@drawable/dummyimage"/>
+                android:layout_height="175dp" />
 
             <RelativeLayout
                 android:id="@+id/account_relay2"

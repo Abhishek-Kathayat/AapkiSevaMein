@@ -11,8 +11,11 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 
+import com.socialapp.socialhelpapp.Adapters.CartAdapter;
 import com.socialapp.socialhelpapp.Adapters.ProductAdapter;
+import com.socialapp.socialhelpapp.Fragments.ShopCartFragment;
 import com.socialapp.socialhelpapp.Models.ProductList_Model;
 import com.socialapp.socialhelpapp.Models.ServiceList_Model;
 import com.socialapp.socialhelpapp.rest.ApiClient;
@@ -32,6 +35,7 @@ public class ProductListActivity extends AppCompatActivity {
     private RecyclerView.LayoutManager mLayoutManager;
     private CoordinatorLayout layout_cart;
     private ProgressBar progressBar;
+    private TextView quantity_cart_list;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -46,6 +50,9 @@ public class ProductListActivity extends AppCompatActivity {
         mRecyclerView.setLayoutManager(mLayoutManager);
         mRecyclerView.setAdapter(mAdapter);
         layout_cart = (CoordinatorLayout)findViewById(R.id.bottomcart_products);
+        quantity_cart_list = (TextView)findViewById(R.id.quantity_bottomcart);
+
+        //quantity_cart_list.setText(ShopCartFragment.cartlist.size());
 
         getProducts();
 

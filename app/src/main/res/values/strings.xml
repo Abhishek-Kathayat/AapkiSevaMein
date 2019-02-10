@@ -19,7 +19,7 @@
     <string name="email">abc@gmail.com</string>
     <string name="delivaddtext">Delivery Address : </string>
     <string name="delivaddresstext">Delivery Address</string>
-    <string name="delivaddress">Lorem ipsum dolor sit amet</string>
+    <string name="delivaddress">H.No.: X/XX, ABC Colony, \nABC Road, Dehradun, \nUttarkhand \n248001</string>
     <string name="yourorder">Your Orders</string>
     <string name="feedback">Suggestions/Feedbacks</string>
     <string name="changepasspin">Change Password/Pin</string>
@@ -31,7 +31,6 @@
     <string name="products">Products</string>
     <string name="checkout">Checkout</string>
     <string name="quantity">Quantity</string>
-    <string name="cartquantity">(10)</string>
     <string name="tollfree_text">Toll-Free Number 1</string>
     <string name="tollfree_number">1800 180 180</string>
     <string name="feedback_1">Suggestions and Feedback :</string>
@@ -47,4 +46,21 @@
     <string name="changepassword">Change Password</string>
     <string name="deleteproduct">Delete</string>
     <string name="default_quantity">1</string>
+    <string name="order_info">Order Details</string>
+    <string name="order_id">Order ID :</string>
+    <string name="dummyid">112#abcd</string>
+    <string name="order_total">Order SubTotal :</string>
+    <string name="dummytotal">1000.00</string>
+    <string name="extra_charges">Delivery Charges :</string>
+    <string name="dummyextracharges">100.00</string>
+    <string name="final_payment">Total Cost :</string>
+    <string name="dummyfinalamt">1100.00</string>
+    <string name="payment_choice">Payment</string>
+    <string name="debitcardnumber">Debit Card Number</string>
+    <string name="debitcardcvv">CVV</string>
+    <string name="debitcardexpdate">Valid Upto</string>
+    <string name="debitcardholder">Holder Name</string>
+    <string name="pay">Pay</string>
+    <string name="order_holder">Deliver To :</string>
+    <string name="dummy_holder">Mr. John Doe</string>
 </resources>
